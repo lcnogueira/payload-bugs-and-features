@@ -15,7 +15,6 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
     "test": "pnpm run test:int && pnpm run test:e2e",
     "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --import=tsx/esm\" playwright test --config=playwright.config.ts",
-    "postinstall": "patch-package",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
@@ -43,7 +42,6 @@
     "eslint": "^9.16.0",
     "eslint-config-next": "15.4.11",
     "jsdom": "28.0.0",
-    "patch-package": "^8.0.1",
     "prettier": "^3.4.2",
     "tsx": "4.21.0",
     "typescript": "5.7.3",

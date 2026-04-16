@@ -11,16 +11,31 @@ export const Posts: CollectionConfig = {
   },
   fields: [
     {
-      name: 'title',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'types',
-      type: 'relationship',
-      relationTo: 'types',
-      hasMany: true,
-      required: true,
+      type: 'tabs',
+      tabs: [
+        {
+          label: 'Tab 1',
+          fields: [
+            {
+              name: 'title',
+              type: 'text',
+              required: true,
+            },
+          ],
+        },
+        {
+          label: 'Tab 2',
+          fields: [
+            {
+              name: 'types',
+              type: 'relationship',
+              relationTo: 'types',
+              hasMany: true,
+              required: true,
+            },
+          ],
+        },
+      ],
     },
   ],
 }
